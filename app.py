@@ -20,13 +20,10 @@ def home():
 @app.route("/predict", methods=['POST'])
 def model_predict():
     args = request.json
-    new_data = {'gender': args.get('gender'),
-    'SeniorCitizen': args.get('SeniorCitizen'),
+    new_data = {'SeniorCitizen': args.get('SeniorCitizen'),
     'Partner': args.get('Partner'),
     'Dependents': args.get('Dependents'),
-    'tenure': args.get('tenure'),
-    'PhoneService': args.get('PhoneService'),
-    'MultipleLines': args.get('MultipleLines'),
+    'tenure': args.get('tenure'),'MultipleLines': args.get('MultipleLines'),
     'InternetService': args.get('InternetService'),
     'OnlineSecurity': args.get('OnlineSecurity'),
     'OnlineBackup': args.get('OnlineBackup'),
